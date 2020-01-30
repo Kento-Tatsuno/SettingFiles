@@ -1,0 +1,41 @@
+{
+    "latex-workshop.latex.tools": [
+        {
+            "command": "latexmk",
+            "args": [
+                "-interaction=nonstopmode",
+                "-pdfdvi",
+                "-latex=platex -kanji=utf-8 -synctex=1 %O %S",
+                "-e",
+                "$dvipdf=\"dvipdfmx %O %S\";$bibtex=\"pbibtex -kanji=utf-8\";$makeindex=\"mendex\";",
+                "%DOC%"
+            ],
+            "name": "latexmk build"
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "command": "latexmk",
+            "tools": [
+                "latexmk build"
+            ],
+            "name": "latexmk toolchain"
+        }
+
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.renderControlCharacters": true,
+  
+    "python.linting.pylintArgs": [
+        "--extension-pkg-whitelist=cv2,numpy,matplotlib",
+        "--generate-members"
+    ],
+    "explorer.confirmDelete": false,
+    "window.zoomLevel": 0,
+    "python.dataScience.askForKernelRestart": false,
+    "git.autofetch": true,
+    "latex-workshop.message.update.show": false,
+
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false
+}
